@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Light mode ── clean blue-tinted white */
+  :root {
+    --bg-page:    #eef2ff;
+    --bg-card:    #ffffff;
+    --bg-input:   #f1f5f9;
+    --bg-hover:   #e8eeff;
+    --text-main:  #0f172a;
+    --text-muted: #64748b;
+    --border:     #cbd5e1;
+    --shadow:     0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(99,102,241,.06);
+  }
+
+  /* ── Dark mode ── deep navy, clearly different */
+  .dark {
+    --bg-page:    #060d1f;
+    --bg-card:    #0f1c35;
+    --bg-input:   #162040;
+    --bg-hover:   #1a2a50;
+    --text-main:  #e2e8f0;
+    --text-muted: #7c93b8;
+    --border:     #1e3358;
+    --shadow:     0 1px 3px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.3);
+  }
+
+  select option {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+  }
+}
+
+@layer utilities {
+  .card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: box-shadow .2s ease, transform .2s ease;
+  }
+  .card:hover {
+    box-shadow: 0 4px 24px rgba(99,102,241,.12);
+  }
+  .dark .card:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,.5);
+  }
+}
