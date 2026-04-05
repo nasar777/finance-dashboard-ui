@@ -8,6 +8,12 @@
 A modern, production-quality personal finance dashboard built with **React 19**, **Tailwind CSS v4**, and **Recharts**. Designed to look and feel like a real fintech product (Stripe / Revolut style).
 
 ---
+## Live Demo
+
+🌐 Live Application  
+https://finance-dashboard-ui-pi-virid.vercel.app
+
+---
 
 ## Live Preview
 
